@@ -15,7 +15,7 @@ function Header() {
         <div className="space-x-4">
           { navItems.map((item) => (
             <button key={ item } className="bg-gray-100 text-black">
-              {item}
+              { item }
             </button>
           ))}
         </div>
