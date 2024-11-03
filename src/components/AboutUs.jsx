@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caramelos do Vale</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v6.6.0/css/all.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- header -->
 
-    <main>
-      <section class="about-us large-margin">
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeart,
+  faSuitcaseMedical,
+  faHouse,
+} from "@fortawesome/free-solid-svg-icons";
+
+const AboutUs = () => {
+  return (
+    <main id="main">
+      <section className="about-us large-margin">
         <img
-          class="image1"
-          src="../images/about-us1.jpg"
+          className="image1"
+          src="../src/images/about-us1.jpg"
           alt="Foto da nossa voluntária Amanda com um dos cães sob cuidado do projeto"
         />
-        <div class="description">
-          <h1 class="hero-title">Sobre Nós 🐾</h1>
+        <div className="description">
+          <h1 className="hero-title">Sobre Nós 🐾</h1>
           <p>
             Caramelos do Vale é uma ONG dedicada à proteção e ao cuidado de
             animais em situação de abandono e vulnerabilidade. Fundada com o
@@ -34,38 +30,48 @@
           </p>
         </div>
       </section>
-      <section class="large-margin">
-        <div class="numbers">
+      <section className="large-margin">
+        <div className="numbers">
           <div>
-            <i class="fa-solid fa-heart fa-4x"></i>
-            <p><b>89</b></p>
+            <FontAwesomeIcon icon={faHeart} size="4x" className="icon" />
+            <p>
+              <b>89</b>
+            </p>
             <p>Adoções</p>
           </div>
           <div>
-            <i class="fa-solid fa-suitcase-medical fa-4x"></i>
-            <p><b>172</b></p>
+            <FontAwesomeIcon
+              icon={faSuitcaseMedical}
+              size="4x"
+              className="icon"
+            />
+            <p>
+              <b>172</b>
+            </p>
             <p>Resgates</p>
           </div>
           <div>
-            <i class="fa-solid fa-house fa-4x"></i>
-            <p><b>27</b></p>
+            <FontAwesomeIcon icon={faHouse} size="4x" className="icon" />
+            <p>
+              <b>27</b>
+            </p>
             <p>Animais atualmente em nossos cuidados</p>
           </div>
         </div>
-        <p class="detail">
+        <p className="detail">
           *alguns dos animais resgatados tiveram os tutores posteriormente
           localizados e não fazem parte do número de adoções
         </p>
       </section>
-      <section class="history large-margin">
-        <h2 class="title-history">Lobo & Loba: onde tudo começou</h2>
-        <div class="description-history">
+      <section className="history large-margin">
+        <h2 className="title-history">Lobo & Loba: onde tudo começou</h2>
+        <div className="description-history">
           <img
-            class="image2"
-            src="../images/about-us2.jpg"
+            className="image2"
+            src="../src/images/about-us2.jpg"
             alt="Foto dos dois cães caramelos que foram a inspiração para o início do projeto"
           />
-          <div class="description">
+          <div className="description">
             <p>
               Essa dupla foi responsável pela formação do grupo, e o nome
               "Caramelos do Vale" é em homenagem a eles. Há alguns anos, eles
@@ -78,7 +84,7 @@
           </div>
         </div>
       </section>
-      <section class="operation large-margin">
+      <section className="operation large-margin">
         <h2>Como Atuamos</h2>
         <p>
           Há mais de dois anos estamos lutando para dar um futuro melhor aos
@@ -105,7 +111,7 @@
           vitória para todos💛.
         </p>
       </section>
-      <section class="join-us large-margin">
+      <section className="join-us large-margin">
         <div>
           <h2>Junte-se a Nós</h2>
           <p>
@@ -117,43 +123,43 @@
           </p>
           <picture>
             <img
-              class="image3 img-round img-join-us"
-              src="../images/join-us1.jpg"
+              className="image3 img-round img-join-us"
+              src="../src/images/join-us1.jpg"
               alt="Imagem de um dos cães ajudado pelo projeto"
             />
           </picture>
           <picture>
             <img
-              class="image4 img-round img-join-us"
-              src="../images/join-us2.jpg"
+              className="image4 img-round img-join-us"
+              src="../src/images/join-us2.jpg"
               alt="Imagem de um dos cães ajudado pelo projeto"
             />
           </picture>
           <picture>
             <img
-              class="image5 img-round img-join-us"
-              src="../images/join-us3.jpg"
+              className="image5 img-round img-join-us"
+              src="../src/images/join-us3.jpg"
               alt="Imagem de um dos cães ajudado pelo projeto"
             />
           </picture>
           <picture>
             <img
-              class="image6 img-round img-join-us"
-              src="../images/join-us4.jpg"
+              className="image6 img-round img-join-us"
+              src="../src/images/join-us4.jpg"
               alt="Imagem de um dos cães ajudado pelo projeto"
             />
           </picture>
         </div>
         <picture>
           <img
-            class="image7"
-            src="../images/join-us5.jpg"
+            className="image7"
+            src="../src/images/join-us5.jpg"
             alt="Foto dos nossos queridos voluntários do projeto no espaço que abriga os cães do projeto"
           />
         </picture>
       </section>
     </main>
+  );
+};
 
-    <!-- header -->
-  </body>
-</html>
+export default AboutUs;
