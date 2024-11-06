@@ -12,23 +12,30 @@ function Footer() {
     "Contato"
   ];
  
-  const socialNet = [{ 
-      id:"Insta",
-      class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg" }, 
+  const socialNet = [
     { 
-      id:"X",
+      id: "Threads",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg" }, 
+      img: "../src/images/socials/threads-logo.svg",
+      url: "https://www.threads.net/@caramelosdovale"
+    }, 
     { 
-      id:"Tiktok",
+      id: "Insta",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg" }
+      img: "../src/images/socials/instagram-logo-white-thin.svg",
+      url: "https://www.instagram.com/caramelosdovale/"
+    }, 
+    // { 
+    //   id: "Tiktok",
+    //   class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
+    //   img: "../src/images/socials/instagram-logo-white-thin.svg",
+    //   url: "https://www.tiktok.com/@a"
+    // }
   ]; 
 
   return (
     <footer className="bg-gray-200 fixed bottom-0 left-0 w-full">
-      <div className="flex flex-col md:flex-row justify-between items-center mt-10">
+      <div className="flex flex-col md:flex-row justify-between items-center my-10">
         {/* Container for the logo and the upper divs */}
         <div className="flex flex-col items-center mb-4 md:mb-0 md:w-1/4">
           {/* Logo (visible on all screens) */}
@@ -43,15 +50,19 @@ function Footer() {
           {/* Upper divs */}
           <div className="flex space-x-4">
             { socialNet.map((item) => (
-              <button
-                key={ item.id } 
-                className="bg-gray-200 p-0 m-0">
+              <a
+                key={ item.id }
+                href={ item.url }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-200 p-0 pt-2 mt-2"
+              >
                 <img
                   src={ item.img }
                   alt={ item.id }
-                  className={ item.class }>
-                </img>
-              </button>
+                  className={ item.class }
+                />
+              </a>
             ))}
           </div>
         </div>
