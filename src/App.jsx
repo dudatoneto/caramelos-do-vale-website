@@ -1,13 +1,18 @@
+import { Routes, Route } from "react-router-dom";
+import Header from './components/Header'
+import Footer from './components/Footer'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import "./styles.css";
+import "./App.css";
+import AboutUs from "./components/AboutUs.jsx";
+import Volunteering from "./components/Volunteering.jsx";
+import Contact from "./components/Contact.jsx";
+import Donations from "./components/Donations.jsx";
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
-
   return (
     <>
       <Header/>
@@ -32,8 +37,15 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Footer />
-    </>
-  )
-}
 
-export default App
+      <Routes>
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/volunteering" element={<Volunteering />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/donations" element={<Donations />} />
+      </Routes>
+    </>
+  );
+};
+
+export default App;
