@@ -25,12 +25,12 @@ function Footer() {
       img: "../src/images/socials/instagram-logo-white-thin.svg",
       url: "https://www.instagram.com/caramelosdovale/"
     }, 
-    // { 
-    //   id: "Tiktok",
-    //   class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-    //   img: "../src/images/socials/instagram-logo-white-thin.svg",
-    //   url: "https://www.tiktok.com/@a"
-    // }
+    { 
+      id: "Tiktok",
+      class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
+      img: "../src/images/socials/instagram-logo-white-thin.svg",
+      url: "https://www.tiktok.com/@caramelosdovale"
+    }
   ]; 
 
   return (
