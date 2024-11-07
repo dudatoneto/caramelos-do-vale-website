@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const navItems = [
@@ -75,9 +76,9 @@ function Footer() {
         {/* Right side with grid (hidden on small screens) */}
         <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 hidden md:grid">
           { navItems.map((item) => (
-            <button key={ item } className="bg-gray-200 text-black p-0">
+            <Link key={ item } className="bg-gray-200 text-black p-0">
               { item }
-            </button>
+            </Link>
           ))}
         </div>
       </div>

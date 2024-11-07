@@ -6,10 +6,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import "./styles.css";
 import "./App.css";
-import AboutUs from "./components/AboutUs.jsx";
-import Volunteering from "./components/Volunteering.jsx";
-import Contact from "./components/Contact.jsx";
-import Donations from "./components/Donations.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import Volunteering from "./pages/Volunteering.jsx";
+import Contact from "./pages/Contact.jsx";
+import Donations from "./pages/Donations.jsx";
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -36,7 +36,6 @@ const App = () => {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Footer />
 
       <Routes>
         <Route path="/about-us" element={<AboutUs />} />
@@ -44,6 +43,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/donations" element={<Donations />} />
       </Routes>
+      <Footer />
     </>
   );
 };
