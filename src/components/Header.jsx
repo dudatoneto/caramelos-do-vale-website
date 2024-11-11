@@ -7,7 +7,7 @@ function Header() {
     <header className="fixed top-0 left-0 w-full bg-gray-200 p-4 flex justify-between items-center shadow-lg">
       {/* Left side for logo */}
       <div className="w-1/4 pl-8">
-        <img src="../src/images/logo-caramelos-do-vale.png" alt="logo" className="h-16" />
+        <img src="../src/images/logos/logo-caramelos-do-vale.png" alt="logo" className="h-16" />
       </div>
 
       {/* Right side for navigation */}
