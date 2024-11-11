@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTiktok, faThreads } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   const navItems = [
@@ -17,19 +19,19 @@ function Footer() {
     { 
       id: "Threads",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/threads-logo.svg",
+      icon: faThreads,
       url: "https://www.threads.net/@caramelosdovale"
     }, 
     { 
-      id: "Insta",
+      id: "Instagram",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg",
+      icon: faInstagram,
       url: "https://www.instagram.com/caramelosdovale/"
     }, 
     { 
       id: "Tiktok",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg",
+      icon: faTiktok,
       url: "https://www.tiktok.com/@caramelosdovale"
     }
   ]; 
@@ -58,10 +60,9 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="bg-gray-200 p-0 pt-2 mt-2"
               >
-                <img
-                  src={ item.img }
-                  alt={ item.id }
-                  className={ item.class }
+                <FontAwesomeIcon 
+                  icon={ item.icon } 
+                  className={ item.class } 
                 />
               </a>
             ))}
