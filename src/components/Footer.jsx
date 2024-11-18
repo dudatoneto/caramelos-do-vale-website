@@ -3,17 +3,28 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok, faThreads } from "@fortawesome/free-brands-svg-icons";
 
-function Footer() {
-  const navItems = [
-    "Página Inicial",
-    "Como ajudar",
-    "Sobre Nós",
-    "Animais para Adoção",
-    "Loja",
-    "Eventos",
-    "Voluntariado",
-    "Contato"
-  ];
+const Footer = ({ props }) => {
+  const { navItems } = props;
+
+  console.log(props);
+  // const navItems = [{
+  //   description: "Página Inicial",
+  //   link: "/" }, {
+  //   description: "Como ajudar",
+  //   link: "/como-ajudar" },{
+  //   description: "Sobre Nós",
+  //   link: "/sobre-nos" }, {
+  //   description: "Animais para Adoção",
+  //   link: "/animais" }, {
+  //   description: "Loja",
+  //   link: "/loja" }, {
+  //   description: "Eventos",
+  //   link: "/eventos" }, {
+  //   description: "Voluntariado",
+  //   link: "/voluntariado" }, {
+  //   description: "Contato",
+  //   link: "/contato" }, 
+  // ];
  
   const socialNet = [
     { 
@@ -76,9 +87,12 @@ function Footer() {
 
         {/* Right side with grid (hidden on small screens) */}
         <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 hidden md:grid">
-          { navItems.map((item) => (
-            <Link key={ item } className="bg-gray-200 text-black p-0">
-              { item }
+          { props.map((item) => (
+            <Link 
+              to={ item.link }
+              key={ item.description } 
+              className="bg-gray-200 text-black p-0">
+              { item.description }
             </Link>
           ))}
         </div>
