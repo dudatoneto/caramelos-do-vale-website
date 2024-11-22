@@ -6,6 +6,7 @@ import {
   faSuitcaseMedical,
   faHouse,
 } from "@fortawesome/free-solid-svg-icons";
+import "./../index.css";
 
 const AboutUs = () => {
   return (

@@ -6,7 +6,7 @@ import AboutUs from "./pages/AboutUs.jsx";
 import Volunteering from "./pages/Volunteering.jsx";
 import Contact from "./pages/Contact.jsx";
 import Donations from "./pages/Donations.jsx";
-import LandingPage from "./pages/LandingPage.jsx";
+import Main from "./pages/Main.jsx";
 
 const App = () => {
   const navItems = [{
@@ -32,7 +32,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Main />} />
         <Route path="/sobre-nos" element={<AboutUs />} />
         <Route path="/voluntariado" element={<Volunteering />} />
         <Route path="/contato" element={<Contact />} />
