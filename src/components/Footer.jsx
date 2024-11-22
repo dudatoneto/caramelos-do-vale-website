@@ -1,34 +1,48 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTiktok, faThreads } from "@fortawesome/free-brands-svg-icons";
 
-function Footer() {
-  const navItems = [
-    "Página Inicial",
-    "Como ajudar",
-    "Sobre Nós",
-    "Animais para Adoção",
-    "Loja",
-    "Eventos",
-    "Voluntariado",
-    "Contato"
-  ];
+const Footer = ({ props }) => {
+  const { navItems } = props;
+
+  console.log(props);
+  // const navItems = [{
+  //   description: "Página Inicial",
+  //   link: "/" }, {
+  //   description: "Como ajudar",
+  //   link: "/como-ajudar" },{
+  //   description: "Sobre Nós",
+  //   link: "/sobre-nos" }, {
+  //   description: "Animais para Adoção",
+  //   link: "/animais" }, {
+  //   description: "Loja",
+  //   link: "/loja" }, {
+  //   description: "Eventos",
+  //   link: "/eventos" }, {
+  //   description: "Voluntariado",
+  //   link: "/voluntariado" }, {
+  //   description: "Contato",
+  //   link: "/contato" }, 
+  // ];
  
   const socialNet = [
     { 
       id: "Threads",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/threads-logo.svg",
+      icon: faThreads,
       url: "https://www.threads.net/@caramelosdovale"
     }, 
     { 
-      id: "Insta",
+      id: "Instagram",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg",
+      icon: faInstagram,
       url: "https://www.instagram.com/caramelosdovale/"
     }, 
     { 
       id: "Tiktok",
       class: "bg-gray-200 text-black p-0 m-0 h-8 w-8",
-      img: "../src/images/socials/instagram-logo-white-thin.svg",
+      icon: faTiktok,
       url: "https://www.tiktok.com/@caramelosdovale"
     }
   ]; 
@@ -57,10 +71,9 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="bg-gray-200 p-0 pt-2 mt-2"
               >
-                <img
-                  src={ item.img }
-                  alt={ item.id }
-                  className={ item.class }
+                <FontAwesomeIcon 
+                  icon={ item.icon } 
+                  className={ item.class } 
                 />
               </a>
             ))}
@@ -73,11 +86,14 @@ function Footer() {
         </div>
 
         {/* Right side with grid (hidden on small screens) */}
-        <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 hidden md:grid">
-          { navItems.map((item) => (
-            <button key={ item } className="bg-gray-200 text-black p-0">
-              { item }
-            </button>
+        <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 hidden md:grid pr-8">
+          { props.map((item) => (
+            <Link 
+              to={ item.link }
+              key={ item.description } 
+              className="bg-gray-200 text-black p-0">
+              { item.description }
+            </Link>
           ))}
         </div>
       </div>
