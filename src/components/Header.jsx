@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Header({ props }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,7 +9,7 @@ function Header({ props }) {
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-200 p-4 flex justify-between items-center shadow-lg z-10">
       {/* Left side for logo */}
-      <div className="flex-shrink-0 ml-4"> 
+      <div className="flex-shrink-0 ml-4">
         <img src="../src/images/logos/logo-caramelos-do-vale.png" alt="logo" className="h-16" />
       </div>
 
@@ -25,12 +27,12 @@ function Header({ props }) {
       </nav>
 
       {/* Mobile menu button */}
-      <div className="md:hidden ml-auto mr-8"> {/* Adicionando ml-auto para garantir que o botão de menu esteja sempre visível */}
+      <div className="md:hidden ml-auto">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-black p-2 rounded focus:outline-none"
+          className="text-black p-2 rounded focus:outline-none bg-gray-200"
         >
-          Menu
+          <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
 
