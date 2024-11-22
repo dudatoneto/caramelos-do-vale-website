@@ -86,7 +86,7 @@ const Footer = ({ props }) => {
         </div>
 
         {/* Right side with grid (hidden on small screens) */}
-        <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 hidden md:grid">
+        <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 hidden md:grid pr-8">
           { props.map((item) => (
             <Link 
               to={ item.link }
